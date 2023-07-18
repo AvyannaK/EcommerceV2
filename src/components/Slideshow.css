@@ -1,0 +1,76 @@
+.slider {
+    width:800px;
+    height:500px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* min-width: 100%; */
+    /* position: relative;
+    margin: auto;
+     */
+     max-width: 80%;
+     position: relative;
+     margin: auto;
+  }
+  
+  .slides {
+    display: flex;
+    width: 300%; /* Adjust the width based on the number of slides */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    flex: 1 0 100%;
+  }
+  
+  .slide img {
+    width: 800px;
+    height: 500px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+  }
+  
+  .navigation-auto {
+    position: absolute;
+    bottom: 10px; /* Adjust the bottom position as needed */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .auto-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .auto-btn.active {
+    background-color: #333;
+  }
+  
+  .navigation-manual {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .manual-btn {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 1%;
+    background-color: #19120f71;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover {
+    background: #f42153;
+  }
+  

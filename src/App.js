@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+// import './Appmobile.css';
+// import './nav.css';
+import Header from './components/nav'
+import Footer from './components/footer'
+import Home from './components/home'
+import Contact from './components/contact'
+import Slideshow from './components/Slideshow';
+import Shop from './components/shop'
+
+// Able to create new routes on site
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   {/* routes/end points below will render the different components */}
+   <Router >
+   <Header />
+    <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/shop" element={<Shop />} />
+    </Routes>
+  <Footer />
+  </Router>
+   </>
   );
 }
-
-export default App;
+ export default App;
